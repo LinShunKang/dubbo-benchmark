@@ -1,4 +1,4 @@
-package cn.benchmark;
+package cn.benchmark.url;
 
 import org.apache.dubbo.common.URL;
 import org.apache.dubbo.common.URLStrParser;

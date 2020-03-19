@@ -1,0 +1,208 @@
+########################################################################################################################
+Aprof 32, Copyright (C) 2002-2017 Devexperts LLC
+Allocation dump at 2020-03-19T23:04:46.052+0800. Uptime 96,035 ms (0h01m36s)
+Arguments config.file=aprof.config:file=aprof.txt:-file.append:filecount=0:threshold=0.01:level=2:time=1m:-verbose:-verbose.redefinition:-verbose.tracked:-verbose.eliminate.allocation:-check.eliminate.allocation:log.file=:dump.classes.dir=:-skipdebug:-noframes:+reflect:-unknown:+size:exclude=:signature=java.lang.String.<init>:aggregate=sun.reflect.GeneratedSerializationConstructorAccessor,sun.reflect.GeneratedConstructorAccessor,sun.reflect.GeneratedMethodAccessor:track=:track.file=:-track.file.replace:histogram=:histogram.file=:port=0
+Transformed 1,423 classes and registered 7,150 locations in 8,814 (9.17%) ms
+Snapshot of counters was made 3 times to write file and 0 times to prevent overflow
+########################################################################################################################
+
+========================================================================================================================
+TOTAL allocation dump for 96,035 ms (0h01m36s)
+Allocated 27,541,967,264 bytes in 723,207,257 objects of 639 classes in 3,183 locations
+========================================================================================================================
+
+Top allocation-inducing locations with data types allocated from them
+------------------------------------------------------------------------------------------------------------------------
+com.alibaba.com.caucho.hessian.io.Hessian2Input.readString: 20,000,001,144 (72.61%) bytes in 480,000,004 (66.37%) objects (avg size 42 bytes)
+	char[]: 14,240,001,144 (51.70%) bytes in 240,000,004 (33.18%) objects (avg size 59 bytes)
+	java.lang.String: 5,760,000,000 (20.91%) bytes in 240,000,000 (33.18%) objects (avg size 24 bytes)
+
+com.alibaba.com.caucho.hessian.io.Hessian2Input.readObject: 1,920,000,000 (6.97%) bytes in 80,000,000 (11.06%) objects (avg size 24 bytes)
+	java.lang.Class[]: 1,920,000,000 (6.97%) bytes in 80,000,000 (11.06%) objects (avg size 24 bytes)
+
+com.alibaba.com.caucho.hessian.io.Hessian2Input.readObjectDefinition: 1,440,000,296 (5.22%) bytes in 40,000,006 (5.53%) objects (avg size 36 bytes)
+	java.lang.String[]: 960,000,000 (3.48%) bytes in 20,000,000 (2.76%) objects (avg size 48 bytes)
+	com.alibaba.com.caucho.hessian.io.Hessian2Input$ObjectDefinition: 480,000,000 (1.74%) bytes in 20,000,000 (2.76%) objects (avg size 24 bytes)
+	... 4 more below threshold: 296 (0.00%) bytes in 6 (0.00%) objects (avg size 49 bytes)
+
+cn.benchmark.model.SimpleBO.hashCode: 1,440,000,000 (5.22%) bytes in 40,000,000 (5.53%) objects (avg size 36 bytes)
+	java.lang.Object[]: 960,000,000 (3.48%) bytes in 20,000,000 (2.76%) objects (avg size 48 bytes)
+	java.lang.Long: 480,000,000 (1.74%) bytes in 20,000,000 (2.76%) objects (avg size 24 bytes)
+
+com.alibaba.com.caucho.hessian.io.JavaDeserializer.instantiate: 960,008,440 (3.48%) bytes in 20,000,106 (2.76%) objects (avg size 48 bytes)
+	cn.benchmark.model.SimpleBO: 959,999,232 (3.48%) bytes in 19,999,984 (2.76%) objects (avg size 48 bytes)
+	... 29 more below threshold: 9,208 (0.00%) bytes in 122 (0.00%) objects (avg size 75 bytes)
+
+com.alibaba.com.caucho.hessian.io.BasicDeserializer.readObject: 960,000,000 (3.48%) bytes in 40,000,000 (5.53%) objects (avg size 24 bytes)
+	java.util.Date: 960,000,000 (3.48%) bytes in 40,000,000 (5.53%) objects (avg size 24 bytes)
+
+cn.benchmark.hessian2.MeasureHessian2GC.testDeserializeOptimize: 640,000,680 (2.32%) bytes in 20,000,007 (2.76%) objects (avg size 32 bytes)
+	java.io.ByteArrayInputStream: 640,000,000 (2.32%) bytes in 20,000,000 (2.76%) objects (avg size 32 bytes)
+	... 4 more below threshold: 680 (0.00%) bytes in 7 (0.00%) objects (avg size 97 bytes)
+
+com.devexperts.aprof.transformer.AProfTransformer.transform: 168,676,688 (0.61%) bytes in 3,034,806 (0.41%) objects (avg size 56 bytes)
+	char[]: 29,573,232 (0.10%) bytes in 401,979 (0.05%) objects (avg size 74 bytes)
+	int[]: 26,195,136 (0.09%) bytes in 449,191 (0.06%) objects (avg size 58 bytes)
+	org.objectweb.asm.Label: 21,288,512 (0.07%) bytes in 332,633 (0.04%) objects (avg size 64 bytes)
+	byte[]: 13,178,832 (0.04%) bytes in 31,724 (0.00%) objects (avg size 415 bytes)
+	org.objectweb.asm.tree.VarInsnNode: 7,257,200 (0.02%) bytes in 181,430 (0.02%) objects (avg size 40 bytes)
+	org.objectweb.asm.tree.InsnNode: 6,391,000 (0.02%) bytes in 159,775 (0.02%) objects (avg size 40 bytes)
+	org.objectweb.asm.Frame: 6,266,544 (0.02%) bytes in 130,553 (0.01%) objects (avg size 48 bytes)
+	org.objectweb.asm.Item: 5,909,512 (0.02%) bytes in 105,527 (0.01%) objects (avg size 56 bytes)
+	org.objectweb.asm.tree.MethodInsnNode: 5,649,448 (0.02%) bytes in 100,883 (0.01%) objects (avg size 56 bytes)
+	java.lang.String: 5,335,536 (0.01%) bytes in 222,314 (0.03%) objects (avg size 24 bytes)
+	org.objectweb.asm.tree.LabelNode: 5,226,320 (0.01%) bytes in 130,658 (0.01%) objects (avg size 40 bytes)
+	org.objectweb.asm.Edge: 3,785,424 (0.01%) bytes in 157,726 (0.02%) objects (avg size 24 bytes)
+	org.objectweb.asm.tree.LineNumberNode: 3,657,216 (0.01%) bytes in 76,192 (0.01%) objects (avg size 48 bytes)
+	org.objectweb.asm.Label[]: 3,375,608 (0.01%) bytes in 13,619 (0.00%) objects (avg size 248 bytes)
+	... 95 more below threshold: 25,587,168 (0.09%) bytes in 540,602 (0.07%) objects (avg size 47 bytes)
+
+java.lang.reflect.Constructor.newInstance: 4,024,072 (0.01%) bytes in 45,597 (0.00%) objects (avg size 88 bytes)
+	char[]: 1,659,224 (0.00%) bytes in 15,035 (0.00%) objects (avg size 110 bytes)
+	... 296 more below threshold: 2,364,848 (0.00%) bytes in 30,562 (0.00%) objects (avg size 77 bytes)
+
+... 468 more below threshold: 9,255,944 (0.03%) bytes in 126,731 (0.01%) objects (avg size 73 bytes)
+
+Top allocated data types with reverse location traces
+------------------------------------------------------------------------------------------------------------------------
+char[]: 14,273,053,384 (51.82%) bytes in 240,430,929 (33.24%) objects (avg size 59 bytes)
+	java.util.Arrays.copyOfRange: 14,252,011,696 (51.74%) bytes in 240,172,442 (33.20%) objects (avg size 59 bytes)
+		java.lang.StringBuilder.toString: 14,240,215,208 (51.70%) bytes in 240,001,160 (33.18%) objects (avg size 59 bytes)
+			com.alibaba.com.caucho.hessian.io.Hessian2Input.readString: 14,240,000,000 (51.70%) bytes in 240,000,000 (33.18%) objects (avg size 59 bytes)
+			... 37 more below threshold: 215,208 (0.00%) bytes in 1,160 (0.00%) objects (avg size 186 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 10,925,248 (0.03%) bytes in 162,567 (0.02%) objects (avg size 67 bytes)
+		... 31 more below threshold: 871,240 (0.00%) bytes in 8,715 (0.00%) objects (avg size 100 bytes)
+	java.lang.String.toCharArray: 6,548,080 (0.02%) bytes in 76,839 (0.01%) objects (avg size 85 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 5,966,504 (0.02%) bytes in 72,001 (0.00%) objects (avg size 83 bytes)
+		... 9 more below threshold: 581,576 (0.00%) bytes in 4,838 (0.00%) objects (avg size 120 bytes)
+	java.util.Arrays.copyOf: 6,042,072 (0.02%) bytes in 54,723 (0.00%) objects (avg size 110 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 4,879,024 (0.01%) bytes in 48,044 (0.00%) objects (avg size 102 bytes)
+		... 27 more below threshold: 1,163,048 (0.00%) bytes in 6,679 (0.00%) objects (avg size 174 bytes)
+	java.lang.String.replace: 4,861,960 (0.01%) bytes in 67,186 (0.00%) objects (avg size 72 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 4,750,208 (0.01%) bytes in 65,775 (0.00%) objects (avg size 72 bytes)
+		... 12 more below threshold: 111,752 (0.00%) bytes in 1,411 (0.00%) objects (avg size 79 bytes)
+	java.lang.AbstractStringBuilder.<init>: 2,898,800 (0.01%) bytes in 56,235 (0.00%) objects (avg size 52 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 2,633,760 (0.00%) bytes in 51,428 (0.00%) objects (avg size 51 bytes)
+		... 25 more below threshold: 265,040 (0.00%) bytes in 4,807 (0.00%) objects (avg size 55 bytes)
+	... 26 more below threshold: 690,776 (0.00%) bytes in 3,504 (0.00%) objects (avg size 197 bytes)
+
+java.lang.String: 5,765,626,608 (20.93%) bytes in 240,234,442 (33.21%) objects (avg size 24 bytes)
+	java.lang.StringBuilder.toString: 5,760,720,624 (20.91%) bytes in 240,030,026 (33.18%) objects
+		com.alibaba.com.caucho.hessian.io.Hessian2Input.readString: 5,760,000,000 (20.91%) bytes in 240,000,000 (33.18%) objects
+		... 60 more below threshold: 720,624 (0.00%) bytes in 30,026 (0.00%) objects
+	... 19 more below threshold: 4,905,984 (0.01%) bytes in 204,416 (0.02%) objects
+
+java.lang.Class[]: 1,920,048,768 (6.97%) bytes in 80,001,384 (11.06%) objects (avg size 24 bytes)
+	com.alibaba.com.caucho.hessian.io.Hessian2Input.readObject: 1,920,000,000 (6.97%) bytes in 80,000,000 (11.06%) objects (avg size 24 bytes)
+	... 50 more below threshold: 48,768 (0.00%) bytes in 1,384 (0.00%) objects (avg size 35 bytes)
+
+java.lang.Object[]: 962,939,624 (3.49%) bytes in 20,042,196 (2.77%) objects (avg size 48 bytes)
+	cn.benchmark.model.SimpleBO.hashCode: 960,000,000 (3.48%) bytes in 20,000,000 (2.76%) objects (avg size 48 bytes)
+	... 52 more below threshold: 2,939,624 (0.01%) bytes in 42,196 (0.00%) objects (avg size 70 bytes)
+
+java.lang.String[]: 960,694,696 (3.48%) bytes in 20,006,922 (2.76%) objects (avg size 48 bytes)
+	com.alibaba.com.caucho.hessian.io.Hessian2Input.readObjectDefinition: 960,000,000 (3.48%) bytes in 20,000,000 (2.76%) objects (avg size 48 bytes)
+	... 22 more below threshold: 694,696 (0.00%) bytes in 6,922 (0.00%) objects (avg size 100 bytes)
+
+java.util.Date: 960,000,240 (3.48%) bytes in 40,000,010 (5.53%) objects (avg size 24 bytes)
+	com.alibaba.com.caucho.hessian.io.BasicDeserializer.readObject: 960,000,000 (3.48%) bytes in 40,000,000 (5.53%) objects
+	... 3 more below threshold: 240 (0.00%) bytes in 10 (0.00%) objects
+
+cn.benchmark.model.SimpleBO: 959,999,280 (3.48%) bytes in 19,999,985 (2.76%) objects (avg size 48 bytes)
+	sun.reflect.GeneratedConstructorAccessor.newInstance: 959,999,232 (3.48%) bytes in 19,999,984 (2.76%) objects
+		java.lang.reflect.Constructor.newInstance: 959,999,232 (3.48%) bytes in 19,999,984 (2.76%) objects
+			com.alibaba.com.caucho.hessian.io.JavaDeserializer.instantiate: 959,999,232 (3.48%) bytes in 19,999,984 (2.76%) objects
+	cn.benchmark.model.SimpleBO.getInstance: 48 (0.00%) bytes in 1 (0.00%) objects
+		java.lang.reflect.Constructor.newInstance: 48 (0.00%) bytes in 1 (0.00%) objects
+			java.lang.reflect.Constructor.newInstance: 48 (0.00%) bytes in 1 (0.00%) objects
+
+java.io.ByteArrayInputStream: 640,002,048 (2.32%) bytes in 20,000,064 (2.76%) objects (avg size 32 bytes)
+	cn.benchmark.hessian2.MeasureHessian2GC.testDeserializeOptimize: 640,000,000 (2.32%) bytes in 20,000,000 (2.76%) objects
+	com.devexperts.aprof.util.InnerJarClassLoader$CachedResource.openStream: 1,824 (0.00%) bytes in 57 (0.00%) objects
+		java.lang.Class.getResourceAsStream: 1,824 (0.00%) bytes in 57 (0.00%) objects
+	java.util.jar.JarFile.getManifestFromReference: 224 (0.00%) bytes in 7 (0.00%) objects
+		<unknown>: 96 (0.00%) bytes in 3 (0.00%) objects
+		... 4 more below threshold: 128 (0.00%) bytes in 4 (0.00%) objects
+
+java.lang.Long: 480,064,272 (1.74%) bytes in 20,002,678 (2.76%) objects (avg size 24 bytes)
+	java.lang.Long.valueOf: 480,000,000 (1.74%) bytes in 20,000,000 (2.76%) objects
+		cn.benchmark.model.SimpleBO.hashCode: 480,000,000 (1.74%) bytes in 20,000,000 (2.76%) objects
+	org.objectweb.asm.ClassReader.readConst: 58,128 (0.00%) bytes in 2,422 (0.00%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 58,128 (0.00%) bytes in 2,422 (0.00%) objects
+	java.lang.Long$LongCache.<clinit>: 6,144 (0.00%) bytes in 256 (0.00%) objects
+		java.lang.Long.valueOf: 6,144 (0.00%) bytes in 256 (0.00%) objects
+			java.lang.Long.valueOf: 6,144 (0.00%) bytes in 256 (0.00%) objects
+
+com.alibaba.com.caucho.hessian.io.Hessian2Input$ObjectDefinition: 480,000,000 (1.74%) bytes in 20,000,000 (2.76%) objects (avg size 24 bytes)
+	com.alibaba.com.caucho.hessian.io.Hessian2Input.readObjectDefinition: 480,000,000 (1.74%) bytes in 20,000,000 (2.76%) objects
+
+int[]: 26,402,544 (0.09%) bytes in 450,142 (0.06%) objects (avg size 59 bytes)
+	org.objectweb.asm.Frame.a: 13,538,240 (0.04%) bytes in 253,662 (0.03%) objects (avg size 53 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 13,538,240 (0.04%) bytes in 253,662 (0.03%) objects (avg size 53 bytes)
+	org.objectweb.asm.Frame.b: 5,005,848 (0.01%) bytes in 89,348 (0.01%) objects (avg size 56 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 5,005,848 (0.01%) bytes in 89,348 (0.01%) objects (avg size 56 bytes)
+	org.objectweb.asm.MethodWriter.a: 2,924,952 (0.01%) bytes in 46,191 (0.00%) objects (avg size 63 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 2,924,952 (0.01%) bytes in 46,191 (0.00%) objects (avg size 63 bytes)
+	... 41 more below threshold: 4,933,504 (0.01%) bytes in 60,941 (0.00%) objects (avg size 81 bytes)
+
+org.objectweb.asm.Label: 21,288,512 (0.07%) bytes in 332,633 (0.04%) objects (avg size 64 bytes)
+	org.objectweb.asm.tree.LabelNode.getLabel: 8,362,112 (0.03%) bytes in 130,658 (0.01%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 8,362,112 (0.03%) bytes in 130,658 (0.01%) objects
+	org.objectweb.asm.ClassReader.readLabel: 4,544,832 (0.01%) bytes in 71,013 (0.00%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 4,544,832 (0.01%) bytes in 71,013 (0.00%) objects
+	... 8 more below threshold: 8,381,568 (0.03%) bytes in 130,962 (0.01%) objects
+
+byte[]: 16,628,440 (0.06%) bytes in 42,955 (0.00%) objects (avg size 387 bytes)
+	org.objectweb.asm.ByteVector.a: 7,478,280 (0.02%) bytes in 9,820 (0.00%) objects (avg size 762 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 7,478,280 (0.02%) bytes in 9,820 (0.00%) objects (avg size 762 bytes)
+	org.objectweb.asm.ByteVector.<init>: 4,809,416 (0.01%) bytes in 18,087 (0.00%) objects (avg size 266 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 4,809,416 (0.01%) bytes in 18,087 (0.00%) objects (avg size 266 bytes)
+	... 33 more below threshold: 4,340,744 (0.01%) bytes in 15,048 (0.00%) objects (avg size 288 bytes)
+
+org.objectweb.asm.tree.VarInsnNode: 7,257,200 (0.02%) bytes in 181,430 (0.02%) objects (avg size 40 bytes)
+	org.objectweb.asm.tree.MethodNode.visitVarInsn: 7,257,200 (0.02%) bytes in 181,430 (0.02%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 7,257,200 (0.02%) bytes in 181,430 (0.02%) objects
+
+org.objectweb.asm.tree.InsnNode: 6,391,000 (0.02%) bytes in 159,775 (0.02%) objects (avg size 40 bytes)
+	org.objectweb.asm.tree.MethodNode.visitInsn: 6,391,000 (0.02%) bytes in 159,775 (0.02%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 6,391,000 (0.02%) bytes in 159,775 (0.02%) objects
+
+org.objectweb.asm.Frame: 6,266,544 (0.02%) bytes in 130,553 (0.01%) objects (avg size 48 bytes)
+	org.objectweb.asm.MethodWriter.visitLabel: 5,138,784 (0.01%) bytes in 107,058 (0.01%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 5,138,784 (0.01%) bytes in 107,058 (0.01%) objects
+	org.objectweb.asm.MethodWriter.e: 1,127,760 (0.00%) bytes in 23,495 (0.00%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 1,127,760 (0.00%) bytes in 23,495 (0.00%) objects
+
+org.objectweb.asm.Item: 5,909,512 (0.02%) bytes in 105,527 (0.01%) objects (avg size 56 bytes)
+	org.objectweb.asm.ClassReader.a: 3,860,304 (0.01%) bytes in 68,934 (0.00%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 3,860,304 (0.01%) bytes in 68,934 (0.00%) objects
+	... 5 more below threshold: 2,049,208 (0.00%) bytes in 36,593 (0.00%) objects
+
+org.objectweb.asm.tree.MethodInsnNode: 5,649,448 (0.02%) bytes in 100,883 (0.01%) objects (avg size 56 bytes)
+	org.objectweb.asm.tree.MethodNode.visitMethodInsn: 5,649,448 (0.02%) bytes in 100,883 (0.01%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 5,649,448 (0.02%) bytes in 100,883 (0.01%) objects
+
+org.objectweb.asm.tree.LabelNode: 5,226,320 (0.01%) bytes in 130,658 (0.01%) objects (avg size 40 bytes)
+	org.objectweb.asm.tree.MethodNode.getLabelNode: 5,226,320 (0.01%) bytes in 130,658 (0.01%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 5,226,320 (0.01%) bytes in 130,658 (0.01%) objects
+
+org.objectweb.asm.Edge: 3,785,424 (0.01%) bytes in 157,726 (0.02%) objects (avg size 24 bytes)
+	org.objectweb.asm.MethodWriter.a: 3,267,120 (0.01%) bytes in 136,130 (0.01%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 3,267,120 (0.01%) bytes in 136,130 (0.01%) objects
+	org.objectweb.asm.MethodWriter.visitMaxs: 518,304 (0.00%) bytes in 21,596 (0.00%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 518,304 (0.00%) bytes in 21,596 (0.00%) objects
+
+org.objectweb.asm.tree.LineNumberNode: 3,657,216 (0.01%) bytes in 76,192 (0.01%) objects (avg size 48 bytes)
+	org.objectweb.asm.tree.MethodNode.visitLineNumber: 3,657,216 (0.01%) bytes in 76,192 (0.01%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 3,657,216 (0.01%) bytes in 76,192 (0.01%) objects
+
+org.objectweb.asm.Label[]: 3,375,608 (0.01%) bytes in 13,619 (0.00%) objects (avg size 248 bytes)
+	org.objectweb.asm.ClassReader.a: 3,340,152 (0.01%) bytes in 13,223 (0.00%) objects (avg size 253 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 3,340,152 (0.01%) bytes in 13,223 (0.00%) objects (avg size 253 bytes)
+	org.objectweb.asm.tree.TableSwitchInsnNode.accept: 30,544 (0.00%) bytes in 248 (0.00%) objects (avg size 123 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 30,544 (0.00%) bytes in 248 (0.00%) objects (avg size 123 bytes)
+	org.objectweb.asm.tree.LookupSwitchInsnNode.accept: 4,912 (0.00%) bytes in 148 (0.00%) objects (avg size 33 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 4,912 (0.00%) bytes in 148 (0.00%) objects (avg size 33 bytes)
+
+... 617 more below threshold: 27,700,576 (0.10%) bytes in 606,554 (0.08%) objects (avg size 46 bytes)
+
