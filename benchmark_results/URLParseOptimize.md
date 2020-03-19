@@ -37,5 +37,10 @@ MeasureURLDecodeGC.testEncodedOriginal   382,050MB
 
 
 #### 压测结论
-* `URLStrParser#parseEncodedStr(String)` 吞吐量比 `URL#valueOf(URL#decode(String))` 高 117%, 内存分配减少 44%
-* `URLStrParser#parseDecodedStr(String)` 吞吐量比 `URL#valueOf(String)` 高 3.5%, 内存分配减少 22%
+* 内存分配
+    - EncodedStr: 优化后 比 优化前 少分配 44% 的内存
+    - DecodedStr: 优化后 比 优化前 少分配 22% 的内存
+* 吞吐量
+    - EncodedStr: 优化后 比 优化前 高 117%
+    - DecodedStr: 优化后 比 优化前 高 3.5%
+
