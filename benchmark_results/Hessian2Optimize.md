@@ -1,4 +1,9 @@
 ### 快速启动
+#### 下载并打包 Dubbo-Hessian-Lite 项目
+* git clone git@github.com:LinShunKang/dubbo-hessian-lite.git
+* git checkout master
+* mvn clean install -Dmaven.test.skip=true
+
 #### 下载并打包 Dubbo 项目
 * git clone git@github.com:LinShunKang/dubbo.git
 * git checkout performance/reduce_object_allocation_v6
