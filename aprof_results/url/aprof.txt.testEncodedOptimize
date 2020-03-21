@@ -1,223 +1,212 @@
 ########################################################################################################################
 Aprof 32, Copyright (C) 2002-2017 Devexperts LLC
-Allocation dump at 2020-03-17T22:32:20.739+0800. Uptime 222,621 ms (0h03m42s)
+Allocation dump at 2020-03-21T15:02:44.885+0800. Uptime 128,478 ms (0h02m08s)
 Arguments config.file=aprof.config:file=aprof.txt:-file.append:filecount=0:threshold=0.01:level=2:time=1m:-verbose:-verbose.redefinition:-verbose.tracked:-verbose.eliminate.allocation:-check.eliminate.allocation:log.file=:dump.classes.dir=:-skipdebug:-noframes:+reflect:-unknown:+size:exclude=:signature=java.lang.String.<init>:aggregate=sun.reflect.GeneratedSerializationConstructorAccessor,sun.reflect.GeneratedConstructorAccessor,sun.reflect.GeneratedMethodAccessor:track=:track.file=:-track.file.replace:histogram=:histogram.file=:port=0
-Transformed 1,309 classes and registered 6,312 locations in 7,776 (3.49%) ms
-Snapshot of counters was made 5 times to write file and 0 times to prevent overflow
+Transformed 1,309 classes and registered 6,311 locations in 8,328 (6.48%) ms
+Snapshot of counters was made 4 times to write file and 0 times to prevent overflow
 ########################################################################################################################
 
 ========================================================================================================================
-TOTAL allocation dump for 222,621 ms (0h03m42s)
-Allocated 213,891,545,680 bytes in 6,022,336,165 objects of 579 classes in 3,127 locations
+TOTAL allocation dump for 128,478 ms (0h02m08s)
+Allocated 95,171,515,848 bytes in 2,602,335,766 objects of 579 classes in 3,122 locations
 ========================================================================================================================
 
 Top allocation-inducing locations with data types allocated from them
 ------------------------------------------------------------------------------------------------------------------------
-org.apache.dubbo.common.URL.toMethodParameters: 90,240,000,000 (42.18%) bytes in 2,880,000,000 (47.82%) objects (avg size 31 bytes)
-	char[]: 42,080,000,000 (19.67%) bytes in 960,000,000 (15.94%) objects (avg size 44 bytes)
-	java.lang.String: 22,080,000,000 (10.32%) bytes in 920,000,000 (15.27%) objects (avg size 24 bytes)
-	java.lang.StringBuilder: 20,160,000,000 (9.42%) bytes in 840,000,000 (13.94%) objects (avg size 24 bytes)
-	java.lang.Object[]: 1,120,000,000 (0.52%) bytes in 20,000,000 (0.33%) objects (avg size 56 bytes)
-	java.util.HashMap: 960,000,000 (0.44%) bytes in 20,000,000 (0.33%) objects (avg size 48 bytes)
-	java.util.ArrayList$SubList: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects (avg size 40 bytes)
-	java.util.ArrayList$SubList$1: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects (avg size 40 bytes)
-	java.util.HashMap$EntryIterator: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects (avg size 40 bytes)
-	java.lang.String[]: 640,000,000 (0.29%) bytes in 20,000,000 (0.33%) objects (avg size 32 bytes)
-	java.util.ArrayList: 480,000,000 (0.22%) bytes in 20,000,000 (0.33%) objects (avg size 24 bytes)
-	java.util.HashMap$EntrySet: 320,000,000 (0.14%) bytes in 20,000,000 (0.33%) objects (avg size 16 bytes)
+org.apache.dubbo.common.URLStrParser.decodeComponent: 29,920,000,000 (31.43%) bytes in 1,040,000,000 (39.96%) objects (avg size 29 bytes)
+	char[]: 17,440,000,000 (18.32%) bytes in 520,000,000 (19.98%) objects (avg size 34 bytes)
+	java.lang.String: 12,480,000,000 (13.11%) bytes in 520,000,000 (19.98%) objects (avg size 24 bytes)
 
-java.lang.StringBuilder.<init>: 41,280,057,272 (19.29%) bytes in 860,001,159 (14.28%) objects (avg size 48 bytes)
-	char[]: 41,280,057,272 (19.29%) bytes in 860,001,159 (14.28%) objects (avg size 48 bytes)
+org.apache.dubbo.common.URLStrParser.addParam: 13,440,000,000 (14.12%) bytes in 320,000,000 (12.29%) objects (avg size 42 bytes)
+	java.util.HashMap$Node: 8,960,000,000 (9.41%) bytes in 280,000,000 (10.75%) objects (avg size 32 bytes)
+	java.util.HashMap$Node[]: 4,480,000,000 (4.70%) bytes in 40,000,000 (1.53%) objects (avg size 112 bytes)
 
-org.apache.dubbo.common.URLStrParser.decodeComponent: 29,920,000,000 (13.98%) bytes in 1,040,000,000 (17.26%) objects (avg size 29 bytes)
-	char[]: 17,440,000,000 (8.15%) bytes in 520,000,000 (8.63%) objects (avg size 34 bytes)
-	java.lang.String: 12,480,000,000 (5.83%) bytes in 520,000,000 (8.63%) objects (avg size 24 bytes)
-
-org.apache.dubbo.common.URLStrParser.addParam: 13,440,000,000 (6.28%) bytes in 320,000,000 (5.31%) objects (avg size 42 bytes)
-	java.util.HashMap$Node: 8,960,000,000 (4.18%) bytes in 280,000,000 (4.64%) objects (avg size 32 bytes)
-	java.util.HashMap$Node[]: 4,480,000,000 (2.09%) bytes in 40,000,000 (0.66%) objects (avg size 112 bytes)
-
-java.util.HashMap.<init>: 12,640,000,776 (5.90%) bytes in 320,000,021 (5.31%) objects (avg size 39 bytes)
-	java.util.HashMap$Node: 8,960,000,544 (4.18%) bytes in 280,000,017 (4.64%) objects (avg size 32 bytes)
-	java.util.HashMap$Node[]: 2,880,000,144 (1.34%) bytes in 20,000,001 (0.33%) objects (avg size 144 bytes)
-	java.util.HashMap$EntryIterator: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects (avg size 40 bytes)
+java.util.HashMap.<init>: 12,640,000,776 (13.28%) bytes in 320,000,021 (12.29%) objects (avg size 39 bytes)
+	java.util.HashMap$Node: 8,960,000,544 (9.41%) bytes in 280,000,017 (10.75%) objects (avg size 32 bytes)
+	java.util.HashMap$Node[]: 2,880,000,144 (3.02%) bytes in 20,000,001 (0.76%) objects (avg size 144 bytes)
+	java.util.HashMap$EntryIterator: 800,000,000 (0.84%) bytes in 20,000,000 (0.76%) objects (avg size 40 bytes)
 	... 3 more below threshold: 88 (0.00%) bytes in 3 (0.00%) objects (avg size 29 bytes)
 
-org.apache.dubbo.common.URLStrParser.parseURLBody: 9,600,000,000 (4.48%) bytes in 260,000,000 (4.31%) objects (avg size 37 bytes)
-	char[]: 4,960,000,000 (2.31%) bytes in 120,000,000 (1.99%) objects (avg size 41 bytes)
-	java.lang.String: 2,880,000,000 (1.34%) bytes in 120,000,000 (1.99%) objects (avg size 24 bytes)
-	org.apache.dubbo.common.URL: 1,760,000,000 (0.82%) bytes in 20,000,000 (0.33%) objects (avg size 88 bytes)
+org.apache.dubbo.common.utils.StringUtils.splitToList0: 9,760,000,000 (10.25%) bytes in 240,000,000 (9.22%) objects (avg size 41 bytes)
+	char[]: 6,240,000,000 (6.55%) bytes in 120,000,000 (4.61%) objects (avg size 52 bytes)
+	java.lang.String: 1,920,000,000 (2.01%) bytes in 80,000,000 (3.07%) objects (avg size 24 bytes)
+	java.lang.Object[]: 1,120,000,000 (1.17%) bytes in 20,000,000 (0.76%) objects (avg size 56 bytes)
+	java.util.ArrayList: 480,000,000 (0.50%) bytes in 20,000,000 (0.76%) objects (avg size 24 bytes)
 
-java.lang.String.<init>(char[],int,int): 6,560,058,472 (3.06%) bytes in 60,000,543 (0.99%) objects (avg size 109 bytes)
-	char[]: 6,560,058,472 (3.06%) bytes in 60,000,543 (0.99%) objects (avg size 109 bytes)
+org.apache.dubbo.common.URLStrParser.parseURLBody: 9,600,000,000 (10.08%) bytes in 260,000,000 (9.99%) objects (avg size 37 bytes)
+	char[]: 4,960,000,000 (5.21%) bytes in 120,000,000 (4.61%) objects (avg size 41 bytes)
+	java.lang.String: 2,880,000,000 (3.02%) bytes in 120,000,000 (4.61%) objects (avg size 24 bytes)
+	org.apache.dubbo.common.URL: 1,760,000,000 (1.84%) bytes in 20,000,000 (0.76%) objects (avg size 88 bytes)
 
-org.apache.dubbo.common.URL.getAddress: 3,840,000,000 (1.79%) bytes in 80,000,000 (1.32%) objects (avg size 48 bytes)
-	char[]: 2,880,000,000 (1.34%) bytes in 40,000,000 (0.66%) objects (avg size 72 bytes)
-	java.lang.String: 480,000,000 (0.22%) bytes in 20,000,000 (0.33%) objects (avg size 24 bytes)
-	java.lang.StringBuilder: 480,000,000 (0.22%) bytes in 20,000,000 (0.33%) objects (avg size 24 bytes)
+java.lang.String.<init>(char[],int,int): 6,560,058,472 (6.89%) bytes in 60,000,543 (2.30%) objects (avg size 109 bytes)
+	char[]: 6,560,058,472 (6.89%) bytes in 60,000,543 (2.30%) objects (avg size 109 bytes)
 
-org.apache.dubbo.common.URL.<init>: 2,239,999,968 (1.04%) bytes in 59,999,999 (0.99%) objects (avg size 37 bytes)
-	java.util.Collections$UnmodifiableMap: 1,279,999,968 (0.59%) bytes in 39,999,999 (0.66%) objects (avg size 32 bytes)
-	java.util.HashMap: 960,000,000 (0.44%) bytes in 20,000,000 (0.33%) objects (avg size 48 bytes)
+org.apache.dubbo.common.URL.getAddress: 3,840,000,000 (4.03%) bytes in 80,000,000 (3.07%) objects (avg size 48 bytes)
+	char[]: 2,880,000,000 (3.02%) bytes in 40,000,000 (1.53%) objects (avg size 72 bytes)
+	java.lang.String: 480,000,000 (0.50%) bytes in 20,000,000 (0.76%) objects (avg size 24 bytes)
+	java.lang.StringBuilder: 480,000,000 (0.50%) bytes in 20,000,000 (0.76%) objects (avg size 24 bytes)
 
-org.apache.dubbo.common.URLStrParser.decodeUtf8Component: 1,440,000,000 (0.67%) bytes in 60,000,000 (0.99%) objects (avg size 24 bytes)
-	java.lang.String: 1,440,000,000 (0.67%) bytes in 60,000,000 (0.99%) objects (avg size 24 bytes)
+org.apache.dubbo.common.URL.<init>: 2,239,999,968 (2.35%) bytes in 59,999,999 (2.30%) objects (avg size 37 bytes)
+	java.util.Collections$UnmodifiableMap: 1,279,999,968 (1.34%) bytes in 39,999,999 (1.53%) objects (avg size 32 bytes)
+	java.util.HashMap: 960,000,000 (1.00%) bytes in 20,000,000 (0.76%) objects (avg size 48 bytes)
 
-java.util.AbstractMap.hashCode: 1,120,000,000 (0.52%) bytes in 40,000,000 (0.66%) objects (avg size 28 bytes)
-	java.util.HashMap$EntryIterator: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects (avg size 40 bytes)
-	java.util.HashMap$EntrySet: 320,000,000 (0.14%) bytes in 20,000,000 (0.33%) objects (avg size 16 bytes)
+org.apache.dubbo.common.URL.toMethodParameters: 2,080,000,000 (2.18%) bytes in 60,000,000 (2.30%) objects (avg size 35 bytes)
+	java.util.HashMap: 960,000,000 (1.00%) bytes in 20,000,000 (0.76%) objects (avg size 48 bytes)
+	java.util.HashMap$EntryIterator: 800,000,000 (0.84%) bytes in 20,000,000 (0.76%) objects (avg size 40 bytes)
+	java.util.HashMap$EntrySet: 320,000,000 (0.33%) bytes in 20,000,000 (0.76%) objects (avg size 16 bytes)
 
-org.apache.dubbo.common.URLStrParser.parseEncodedParams: 960,000,000 (0.44%) bytes in 20,000,000 (0.33%) objects (avg size 48 bytes)
-	java.util.HashMap: 960,000,000 (0.44%) bytes in 20,000,000 (0.33%) objects (avg size 48 bytes)
+org.apache.dubbo.common.URLStrParser.decodeUtf8Component: 1,440,000,000 (1.51%) bytes in 60,000,000 (2.30%) objects (avg size 24 bytes)
+	java.lang.String: 1,440,000,000 (1.51%) bytes in 60,000,000 (2.30%) objects (avg size 24 bytes)
 
-com.devexperts.aprof.AProfRegistry.resolveClassName: 480,386,616 (0.22%) bytes in 20,016,109 (0.33%) objects (avg size 24 bytes)
-	java.lang.StringBuilder: 480,386,616 (0.22%) bytes in 20,016,109 (0.33%) objects (avg size 24 bytes)
+java.util.AbstractMap.hashCode: 1,120,000,000 (1.17%) bytes in 40,000,000 (1.53%) objects (avg size 28 bytes)
+	java.util.HashMap$EntryIterator: 800,000,000 (0.84%) bytes in 20,000,000 (0.76%) objects (avg size 40 bytes)
+	java.util.HashMap$EntrySet: 320,000,000 (0.33%) bytes in 20,000,000 (0.76%) objects (avg size 16 bytes)
 
-com.devexperts.aprof.transformer.AProfTransformer.transform: 119,896,504 (0.05%) bytes in 2,185,497 (0.03%) objects (avg size 55 bytes)
-	char[]: 21,593,152 (0.01%) bytes in 300,285 (0.00%) objects (avg size 72 bytes)
-	... 102 more below threshold: 98,303,352 (0.04%) bytes in 1,885,212 (0.03%) objects (avg size 52 bytes)
+java.lang.StringBuilder.<init>: 960,057,272 (1.00%) bytes in 20,001,159 (0.76%) objects (avg size 48 bytes)
+	char[]: 960,057,272 (1.00%) bytes in 20,001,159 (0.76%) objects (avg size 48 bytes)
 
-... 518 more below threshold: 11,146,072 (0.00%) bytes in 132,837 (0.00%) objects (avg size 84 bytes)
+org.apache.dubbo.common.URLStrParser.parseEncodedParams: 960,000,000 (1.00%) bytes in 20,000,000 (0.76%) objects (avg size 48 bytes)
+	java.util.HashMap: 960,000,000 (1.00%) bytes in 20,000,000 (0.76%) objects (avg size 48 bytes)
+
+com.devexperts.aprof.AProfRegistry.resolveClassName: 480,386,568 (0.50%) bytes in 20,016,107 (0.76%) objects (avg size 24 bytes)
+	java.lang.StringBuilder: 480,386,568 (0.50%) bytes in 20,016,107 (0.76%) objects (avg size 24 bytes)
+
+com.devexperts.aprof.transformer.AProfTransformer.transform: 119,877,376 (0.12%) bytes in 2,185,171 (0.08%) objects (avg size 55 bytes)
+	char[]: 21,583,232 (0.02%) bytes in 300,131 (0.01%) objects (avg size 72 bytes)
+	int[]: 16,931,464 (0.01%) bytes in 299,191 (0.01%) objects (avg size 57 bytes)
+	org.objectweb.asm.Label: 15,348,736 (0.01%) bytes in 239,824 (0.00%) objects (avg size 64 bytes)
+	... 100 more below threshold: 66,013,944 (0.06%) bytes in 1,346,025 (0.05%) objects (avg size 49 bytes)
+
+... 518 more below threshold: 11,135,416 (0.01%) bytes in 132,766 (0.00%) objects (avg size 84 bytes)
 
 Top allocated data types with reverse location traces
 ------------------------------------------------------------------------------------------------------------------------
-char[]: 115,224,497,272 (53.87%) bytes in 2,560,326,045 (42.51%) objects (avg size 45 bytes)
-	java.util.Arrays.copyOfRange: 69,448,736,488 (32.46%) bytes in 1,640,128,577 (27.23%) objects (avg size 42 bytes)
-		java.lang.StringBuilder.toString: 36,960,216,384 (17.27%) bytes in 860,001,170 (14.28%) objects (avg size 43 bytes)
-			org.apache.dubbo.common.URL.toMethodParameters: 35,840,000,000 (16.75%) bytes in 840,000,000 (13.94%) objects (avg size 43 bytes)
-			org.apache.dubbo.common.URL.getAddress: 1,120,000,000 (0.52%) bytes in 20,000,000 (0.33%) objects (avg size 56 bytes)
-			... 40 more below threshold: 216,384 (0.00%) bytes in 1,170 (0.00%) objects (avg size 185 bytes)
-		java.lang.String.substring: 22,400,110,624 (10.47%) bytes in 640,001,258 (10.62%) objects (avg size 35 bytes)
-			org.apache.dubbo.common.URLStrParser.decodeComponent: 17,440,000,000 (8.15%) bytes in 520,000,000 (8.63%) objects (avg size 34 bytes)
-			org.apache.dubbo.common.URLStrParser.parseURLBody: 4,960,000,000 (2.31%) bytes in 120,000,000 (1.99%) objects (avg size 41 bytes)
-			... 22 more below threshold: 110,624 (0.00%) bytes in 1,258 (0.00%) objects (avg size 88 bytes)
-		java.lang.String.<init>(char[],int,int): 6,560,058,472 (3.06%) bytes in 60,000,543 (0.99%) objects (avg size 109 bytes)
-		java.lang.String.split: 3,520,000,216 (1.64%) bytes in 80,000,005 (1.32%) objects (avg size 44 bytes)
-			org.apache.dubbo.common.URL.toMethodParameters: 3,520,000,000 (1.64%) bytes in 80,000,000 (1.32%) objects (avg size 44 bytes)
-			sun.security.util.AbstractAlgorithmConstraints.getAlgorithms: 216 (0.00%) bytes in 5 (0.00%) objects (avg size 43 bytes)
-		... 30 more below threshold: 8,350,792 (0.00%) bytes in 125,601 (0.00%) objects (avg size 66 bytes)
-	java.lang.AbstractStringBuilder.<init>: 42,242,300,088 (19.74%) bytes in 880,044,478 (14.61%) objects (avg size 48 bytes)
-		java.lang.StringBuilder.<init>: 41,280,057,848 (19.29%) bytes in 860,001,171 (14.28%) objects (avg size 48 bytes)
-			<unknown>: 41,280,057,272 (19.29%) bytes in 860,001,159 (14.28%) objects (avg size 48 bytes)
+char[]: 39,064,486,552 (41.04%) bytes in 880,325,874 (33.82%) objects (avg size 44 bytes)
+	java.util.Arrays.copyOfRange: 33,608,732,904 (35.31%) bytes in 800,128,513 (30.74%) objects (avg size 42 bytes)
+		java.lang.String.substring: 24,800,110,640 (26.05%) bytes in 700,001,258 (26.89%) objects (avg size 35 bytes)
+			org.apache.dubbo.common.URLStrParser.decodeComponent: 17,440,000,000 (18.32%) bytes in 520,000,000 (19.98%) objects (avg size 34 bytes)
+			org.apache.dubbo.common.URLStrParser.parseURLBody: 4,960,000,000 (5.21%) bytes in 120,000,000 (4.61%) objects (avg size 41 bytes)
+			org.apache.dubbo.common.utils.StringUtils.splitToList0: 2,400,000,000 (2.52%) bytes in 60,000,000 (2.30%) objects (avg size 40 bytes)
+			... 22 more below threshold: 110,640 (0.00%) bytes in 1,258 (0.00%) objects (avg size 88 bytes)
+		java.lang.String.<init>(char[],int,int): 6,560,058,472 (6.89%) bytes in 60,000,543 (2.30%) objects (avg size 109 bytes)
+		java.lang.StringBuilder.toString: 1,120,216,392 (1.17%) bytes in 20,001,170 (0.76%) objects (avg size 56 bytes)
+			org.apache.dubbo.common.URL.getAddress: 1,120,000,000 (1.17%) bytes in 20,000,000 (0.76%) objects (avg size 56 bytes)
+			... 40 more below threshold: 216,392 (0.00%) bytes in 1,170 (0.00%) objects (avg size 185 bytes)
+		java.util.ArrayList.add: 1,120,001,960 (1.17%) bytes in 20,000,035 (0.76%) objects (avg size 56 bytes)
+			org.apache.dubbo.common.utils.StringUtils.splitToList0: 1,120,000,000 (1.17%) bytes in 20,000,000 (0.76%) objects (avg size 56 bytes)
+			... 14 more below threshold: 1,960 (0.00%) bytes in 35 (0.00%) objects (avg size 56 bytes)
+		... 30 more below threshold: 8,345,440 (0.00%) bytes in 125,507 (0.00%) objects (avg size 66 bytes)
+	java.util.Arrays.copyOf: 3,524,556,384 (3.70%) bytes in 40,042,346 (1.53%) objects (avg size 88 bytes)
+		java.lang.StringBuilder.append: 1,760,440,768 (1.84%) bytes in 20,002,000 (0.76%) objects (avg size 88 bytes)
+			org.apache.dubbo.common.URL.getAddress: 1,760,000,000 (1.84%) bytes in 20,000,000 (0.76%) objects (avg size 88 bytes)
+			... 29 more below threshold: 440,768 (0.00%) bytes in 2,000 (0.00%) objects (avg size 220 bytes)
+		java.util.ArrayList.add: 1,760,003,080 (1.84%) bytes in 20,000,035 (0.76%) objects (avg size 88 bytes)
+			org.apache.dubbo.common.utils.StringUtils.splitToList0: 1,760,000,000 (1.84%) bytes in 20,000,000 (0.76%) objects (avg size 88 bytes)
+			... 14 more below threshold: 3,080 (0.00%) bytes in 35 (0.00%) objects (avg size 88 bytes)
+		... 27 more below threshold: 4,112,536 (0.00%) bytes in 40,311 (0.00%) objects (avg size 102 bytes)
+	java.lang.AbstractStringBuilder.<init>: 1,922,297,432 (2.01%) bytes in 40,044,422 (1.53%) objects (avg size 48 bytes)
+		java.lang.StringBuilder.<init>: 960,057,848 (1.00%) bytes in 20,001,171 (0.76%) objects (avg size 48 bytes)
+			<unknown>: 960,057,272 (1.00%) bytes in 20,001,159 (0.76%) objects (avg size 48 bytes)
 			sun.reflect.annotation.AnnotationParser.toArray: 576 (0.00%) bytes in 12 (0.00%) objects (avg size 48 bytes)
-		java.lang.String.split: 960,000,048 (0.44%) bytes in 20,000,001 (0.33%) objects (avg size 48 bytes)
-			org.apache.dubbo.common.URL.toMethodParameters: 960,000,000 (0.44%) bytes in 20,000,000 (0.33%) objects (avg size 48 bytes)
-			sun.security.util.AbstractAlgorithmConstraints.getAlgorithms: 48 (0.00%) bytes in 1 (0.00%) objects (avg size 48 bytes)
-		... 24 more below threshold: 2,242,192 (0.00%) bytes in 43,306 (0.00%) objects (avg size 52 bytes)
-	java.util.Arrays.copyOf: 3,524,561,352 (1.64%) bytes in 40,042,403 (0.66%) objects (avg size 88 bytes)
-		java.lang.StringBuilder.append: 1,760,440,760 (0.82%) bytes in 20,002,000 (0.33%) objects (avg size 88 bytes)
-			org.apache.dubbo.common.URL.getAddress: 1,760,000,000 (0.82%) bytes in 20,000,000 (0.33%) objects (avg size 88 bytes)
-			... 29 more below threshold: 440,760 (0.00%) bytes in 2,000 (0.00%) objects (avg size 220 bytes)
-		java.lang.String.split: 1,760,000,088 (0.82%) bytes in 20,000,001 (0.33%) objects (avg size 88 bytes)
-			org.apache.dubbo.common.URL.toMethodParameters: 1,760,000,000 (0.82%) bytes in 20,000,000 (0.33%) objects (avg size 88 bytes)
-			sun.security.util.AbstractAlgorithmConstraints.getAlgorithms: 88 (0.00%) bytes in 1 (0.00%) objects (avg size 88 bytes)
-		... 27 more below threshold: 4,120,504 (0.00%) bytes in 40,402 (0.00%) objects (avg size 102 bytes)
-	... 30 more below threshold: 8,899,344 (0.00%) bytes in 110,587 (0.00%) objects (avg size 80 bytes)
+		java.util.ArrayList.add: 960,001,680 (1.00%) bytes in 20,000,035 (0.76%) objects (avg size 48 bytes)
+			org.apache.dubbo.common.utils.StringUtils.splitToList0: 960,000,000 (1.00%) bytes in 20,000,000 (0.76%) objects (avg size 48 bytes)
+			... 14 more below threshold: 1,680 (0.00%) bytes in 35 (0.00%) objects (avg size 48 bytes)
+		... 24 more below threshold: 2,237,904 (0.00%) bytes in 43,216 (0.00%) objects (avg size 52 bytes)
+	... 30 more below threshold: 8,899,832 (0.00%) bytes in 110,593 (0.00%) objects (avg size 80 bytes)
 
-java.lang.String: 39,364,167,432 (18.40%) bytes in 1,640,173,643 (27.23%) objects (avg size 24 bytes)
-	java.lang.StringBuilder.toString: 21,120,575,904 (9.87%) bytes in 880,023,996 (14.61%) objects
-		org.apache.dubbo.common.URL.toMethodParameters: 20,160,000,000 (9.42%) bytes in 840,000,000 (13.94%) objects
-		java.lang.String.split: 480,000,024 (0.22%) bytes in 20,000,001 (0.33%) objects
-			org.apache.dubbo.common.URL.toMethodParameters: 480,000,000 (0.22%) bytes in 20,000,000 (0.33%) objects
-			sun.security.util.AbstractAlgorithmConstraints.getAlgorithms: 24 (0.00%) bytes in 1 (0.00%) objects
-		org.apache.dubbo.common.URL.getAddress: 480,000,000 (0.22%) bytes in 20,000,000 (0.33%) objects
-		... 62 more below threshold: 575,880 (0.00%) bytes in 23,995 (0.00%) objects
-	java.lang.String.substring: 16,800,769,632 (7.85%) bytes in 700,032,068 (11.62%) objects
-		org.apache.dubbo.common.URLStrParser.decodeComponent: 12,480,000,000 (5.83%) bytes in 520,000,000 (8.63%) objects
-		org.apache.dubbo.common.URLStrParser.parseURLBody: 2,880,000,000 (1.34%) bytes in 120,000,000 (1.99%) objects
-		java.lang.String.split: 1,440,000,096 (0.67%) bytes in 60,000,004 (0.99%) objects
-			org.apache.dubbo.common.URL.toMethodParameters: 1,440,000,000 (0.67%) bytes in 60,000,000 (0.99%) objects
-			sun.security.util.AbstractAlgorithmConstraints.getAlgorithms: 96 (0.00%) bytes in 4 (0.00%) objects
-		... 32 more below threshold: 769,536 (0.00%) bytes in 32,064 (0.00%) objects
-	org.apache.dubbo.common.URLStrParser.decodeUtf8Component: 1,440,000,000 (0.67%) bytes in 60,000,000 (0.99%) objects
-	... 18 more below threshold: 2,821,896 (0.00%) bytes in 117,579 (0.00%) objects
+java.lang.String: 19,204,166,040 (20.17%) bytes in 800,173,585 (30.74%) objects (avg size 24 bytes)
+	java.lang.String.substring: 16,800,769,464 (17.65%) bytes in 700,032,061 (26.90%) objects
+		org.apache.dubbo.common.URLStrParser.decodeComponent: 12,480,000,000 (13.11%) bytes in 520,000,000 (19.98%) objects
+		org.apache.dubbo.common.URLStrParser.parseURLBody: 2,880,000,000 (3.02%) bytes in 120,000,000 (4.61%) objects
+		org.apache.dubbo.common.utils.StringUtils.splitToList0: 1,440,000,000 (1.51%) bytes in 60,000,000 (2.30%) objects
+		... 33 more below threshold: 769,464 (0.00%) bytes in 32,061 (0.00%) objects
+	org.apache.dubbo.common.URLStrParser.decodeUtf8Component: 1,440,000,000 (1.51%) bytes in 60,000,000 (2.30%) objects
+	java.lang.StringBuilder.toString: 960,575,760 (1.00%) bytes in 40,023,990 (1.53%) objects
+		java.util.ArrayList.add: 480,000,840 (0.50%) bytes in 20,000,035 (0.76%) objects
+			org.apache.dubbo.common.utils.StringUtils.splitToList0: 480,000,000 (0.50%) bytes in 20,000,000 (0.76%) objects
+			... 14 more below threshold: 840 (0.00%) bytes in 35 (0.00%) objects
+		org.apache.dubbo.common.URL.getAddress: 480,000,000 (0.50%) bytes in 20,000,000 (0.76%) objects
+		... 62 more below threshold: 574,920 (0.00%) bytes in 23,955 (0.00%) objects
+	... 18 more below threshold: 2,820,816 (0.00%) bytes in 117,534 (0.00%) objects
 
-java.lang.StringBuilder: 21,120,562,440 (9.87%) bytes in 880,023,435 (14.61%) objects (avg size 24 bytes)
-	org.apache.dubbo.common.URL.toMethodParameters: 20,160,000,000 (9.42%) bytes in 840,000,000 (13.94%) objects
-	com.devexperts.aprof.AProfRegistry.resolveClassName: 480,386,616 (0.22%) bytes in 20,016,109 (0.33%) objects
-	org.apache.dubbo.common.URL.getAddress: 480,000,000 (0.22%) bytes in 20,000,000 (0.33%) objects
-	... 93 more below threshold: 175,824 (0.00%) bytes in 7,326 (0.00%) objects
-
-java.util.HashMap$Node: 17,920,038,368 (8.37%) bytes in 560,001,199 (9.29%) objects (avg size 32 bytes)
-	java.util.HashMap.newNode: 17,920,038,368 (8.37%) bytes in 560,001,199 (9.29%) objects
-		java.util.HashMap.put: 8,960,006,048 (4.18%) bytes in 280,000,189 (4.64%) objects
-			org.apache.dubbo.common.URLStrParser.addParam: 8,960,000,000 (4.18%) bytes in 280,000,000 (4.64%) objects
+java.util.HashMap$Node: 17,920,038,496 (18.82%) bytes in 560,001,203 (21.51%) objects (avg size 32 bytes)
+	java.util.HashMap.newNode: 17,920,038,496 (18.82%) bytes in 560,001,203 (21.51%) objects
+		java.util.HashMap.put: 8,960,006,048 (9.41%) bytes in 280,000,189 (10.75%) objects
+			org.apache.dubbo.common.URLStrParser.addParam: 8,960,000,000 (9.41%) bytes in 280,000,000 (10.75%) objects
 			... 13 more below threshold: 6,048 (0.00%) bytes in 189 (0.00%) objects
-		java.util.HashMap.<init>: 8,960,000,544 (4.18%) bytes in 280,000,017 (4.64%) objects
-		... 6 more below threshold: 31,776 (0.00%) bytes in 993 (0.00%) objects
+		java.util.HashMap.<init>: 8,960,000,544 (9.41%) bytes in 280,000,017 (10.75%) objects
+		... 6 more below threshold: 31,904 (0.00%) bytes in 997 (0.00%) objects
 
-java.util.HashMap$Node[]: 7,360,023,600 (3.44%) bytes in 60,000,086 (0.99%) objects (avg size 123 bytes)
-	java.util.HashMap.resize: 7,360,023,600 (3.44%) bytes in 60,000,086 (0.99%) objects (avg size 123 bytes)
-		java.util.HashMap.put: 4,480,004,192 (2.09%) bytes in 40,000,034 (0.66%) objects (avg size 112 bytes)
-			org.apache.dubbo.common.URLStrParser.addParam: 4,480,000,000 (2.09%) bytes in 40,000,000 (0.66%) objects (avg size 112 bytes)
+java.util.HashMap$Node[]: 7,360,023,600 (7.73%) bytes in 60,000,086 (2.30%) objects (avg size 123 bytes)
+	java.util.HashMap.resize: 7,360,023,600 (7.73%) bytes in 60,000,086 (2.30%) objects (avg size 123 bytes)
+		java.util.HashMap.put: 4,480,004,192 (4.70%) bytes in 40,000,034 (1.53%) objects (avg size 112 bytes)
+			org.apache.dubbo.common.URLStrParser.addParam: 4,480,000,000 (4.70%) bytes in 40,000,000 (1.53%) objects (avg size 112 bytes)
 			... 14 more below threshold: 4,192 (0.00%) bytes in 34 (0.00%) objects (avg size 123 bytes)
-		java.util.HashMap.<init>: 2,880,000,144 (1.34%) bytes in 20,000,001 (0.33%) objects (avg size 144 bytes)
+		java.util.HashMap.<init>: 2,880,000,144 (3.02%) bytes in 20,000,001 (0.76%) objects (avg size 144 bytes)
 		... 6 more below threshold: 19,264 (0.00%) bytes in 51 (0.00%) objects (avg size 378 bytes)
 
-java.util.HashMap: 2,880,244,320 (1.34%) bytes in 60,005,090 (0.99%) objects (avg size 48 bytes)
-	org.apache.dubbo.common.URL.<init>: 960,000,000 (0.44%) bytes in 20,000,000 (0.33%) objects
-	org.apache.dubbo.common.URL.toMethodParameters: 960,000,000 (0.44%) bytes in 20,000,000 (0.33%) objects
-	org.apache.dubbo.common.URLStrParser.parseEncodedParams: 960,000,000 (0.44%) bytes in 20,000,000 (0.33%) objects
-	... 24 more below threshold: 244,320 (0.00%) bytes in 5,090 (0.00%) objects
+java.util.HashMap: 2,880,244,272 (3.02%) bytes in 60,005,089 (2.30%) objects (avg size 48 bytes)
+	org.apache.dubbo.common.URL.<init>: 960,000,000 (1.00%) bytes in 20,000,000 (0.76%) objects
+	org.apache.dubbo.common.URL.toMethodParameters: 960,000,000 (1.00%) bytes in 20,000,000 (0.76%) objects
+	org.apache.dubbo.common.URLStrParser.parseEncodedParams: 960,000,000 (1.00%) bytes in 20,000,000 (0.76%) objects
+	... 24 more below threshold: 244,272 (0.00%) bytes in 5,089 (0.00%) objects
 
-java.util.HashMap$EntryIterator: 2,400,000,240 (1.12%) bytes in 60,000,006 (0.99%) objects (avg size 40 bytes)
-	java.util.HashMap$EntrySet.iterator: 2,400,000,240 (1.12%) bytes in 60,000,006 (0.99%) objects
-		java.util.AbstractMap.hashCode: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects
-		java.util.HashMap.<init>: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects
-		org.apache.dubbo.common.URL.toMethodParameters: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects
+java.util.HashMap$EntryIterator: 2,400,000,240 (2.52%) bytes in 60,000,006 (2.30%) objects (avg size 40 bytes)
+	java.util.HashMap$EntrySet.iterator: 2,400,000,240 (2.52%) bytes in 60,000,006 (2.30%) objects
+		java.util.AbstractMap.hashCode: 800,000,000 (0.84%) bytes in 20,000,000 (0.76%) objects
+		java.util.HashMap.<init>: 800,000,000 (0.84%) bytes in 20,000,000 (0.76%) objects
+		org.apache.dubbo.common.URL.toMethodParameters: 800,000,000 (0.84%) bytes in 20,000,000 (0.76%) objects
 		java.util.HashMap.putMapEntries: 200 (0.00%) bytes in 5 (0.00%) objects
 		java.lang.reflect.Constructor.newInstance: 40 (0.00%) bytes in 1 (0.00%) objects
 			java.lang.reflect.Constructor.newInstance: 40 (0.00%) bytes in 1 (0.00%) objects
 
-org.apache.dubbo.common.URL: 1,760,000,000 (0.82%) bytes in 20,000,000 (0.33%) objects (avg size 88 bytes)
-	org.apache.dubbo.common.URLStrParser.parseURLBody: 1,760,000,000 (0.82%) bytes in 20,000,000 (0.33%) objects
+org.apache.dubbo.common.URL: 1,760,000,000 (1.84%) bytes in 20,000,000 (0.76%) objects (avg size 88 bytes)
+	org.apache.dubbo.common.URLStrParser.parseURLBody: 1,760,000,000 (1.84%) bytes in 20,000,000 (0.76%) objects
 
-java.util.Collections$UnmodifiableMap: 1,280,000,000 (0.59%) bytes in 40,000,000 (0.66%) objects (avg size 32 bytes)
-	java.util.Collections.unmodifiableMap: 1,280,000,000 (0.59%) bytes in 40,000,000 (0.66%) objects
-		org.apache.dubbo.common.URL.<init>: 1,279,999,968 (0.59%) bytes in 39,999,999 (0.66%) objects
+java.util.Collections$UnmodifiableMap: 1,280,000,000 (1.34%) bytes in 40,000,000 (1.53%) objects (avg size 32 bytes)
+	java.util.Collections.unmodifiableMap: 1,280,000,000 (1.34%) bytes in 40,000,000 (1.53%) objects
+		org.apache.dubbo.common.URL.<init>: 1,279,999,968 (1.34%) bytes in 39,999,999 (1.53%) objects
 		java.util.Collections.unmodifiableMap: 32 (0.00%) bytes in 1 (0.00%) objects
 
-java.lang.Object[]: 1,122,219,464 (0.52%) bytes in 20,031,511 (0.33%) objects (avg size 56 bytes)
-	java.util.Arrays.copyOf: 1,120,581,240 (0.52%) bytes in 20,008,895 (0.33%) objects (avg size 56 bytes)
-		java.lang.String.split: 1,120,000,056 (0.52%) bytes in 20,000,001 (0.33%) objects (avg size 56 bytes)
-			org.apache.dubbo.common.URL.toMethodParameters: 1,120,000,000 (0.52%) bytes in 20,000,000 (0.33%) objects (avg size 56 bytes)
-			sun.security.util.AbstractAlgorithmConstraints.getAlgorithms: 56 (0.00%) bytes in 1 (0.00%) objects (avg size 56 bytes)
-		... 8 more below threshold: 581,184 (0.00%) bytes in 8,894 (0.00%) objects (avg size 65 bytes)
-	... 53 more below threshold: 1,638,224 (0.00%) bytes in 22,616 (0.00%) objects (avg size 72 bytes)
+java.lang.Object[]: 1,122,219,136 (1.17%) bytes in 20,031,509 (0.76%) objects (avg size 56 bytes)
+	java.util.Arrays.copyOf: 1,120,581,088 (1.17%) bytes in 20,008,894 (0.76%) objects (avg size 56 bytes)
+		java.util.ArrayList.add: 1,120,003,360 (1.17%) bytes in 20,000,035 (0.76%) objects (avg size 56 bytes)
+			org.apache.dubbo.common.utils.StringUtils.splitToList0: 1,120,000,000 (1.17%) bytes in 20,000,000 (0.76%) objects (avg size 56 bytes)
+			... 14 more below threshold: 3,360 (0.00%) bytes in 35 (0.00%) objects (avg size 96 bytes)
+		... 8 more below threshold: 577,728 (0.00%) bytes in 8,859 (0.00%) objects (avg size 65 bytes)
+	... 53 more below threshold: 1,638,048 (0.00%) bytes in 22,615 (0.00%) objects (avg size 72 bytes)
 
-java.util.ArrayList$SubList: 800,000,040 (0.37%) bytes in 20,000,001 (0.33%) objects (avg size 40 bytes)
-	java.util.ArrayList.subList: 800,000,040 (0.37%) bytes in 20,000,001 (0.33%) objects
-		java.lang.String.split: 800,000,040 (0.37%) bytes in 20,000,001 (0.33%) objects
-			org.apache.dubbo.common.URL.toMethodParameters: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects
-			java.lang.String.split: 40 (0.00%) bytes in 1 (0.00%) objects
+java.lang.StringBuilder: 960,562,296 (1.00%) bytes in 40,023,429 (1.53%) objects (avg size 24 bytes)
+	com.devexperts.aprof.AProfRegistry.resolveClassName: 480,386,568 (0.50%) bytes in 20,016,107 (0.76%) objects
+	org.apache.dubbo.common.URL.getAddress: 480,000,000 (0.50%) bytes in 20,000,000 (0.76%) objects
+	... 93 more below threshold: 175,728 (0.00%) bytes in 7,322 (0.00%) objects
 
-java.util.ArrayList$SubList$1: 800,000,040 (0.37%) bytes in 20,000,001 (0.33%) objects (avg size 40 bytes)
-	java.util.ArrayList$SubList.listIterator: 800,000,040 (0.37%) bytes in 20,000,001 (0.33%) objects
-		java.lang.String.split: 800,000,040 (0.37%) bytes in 20,000,001 (0.33%) objects
-			org.apache.dubbo.common.URL.toMethodParameters: 800,000,000 (0.37%) bytes in 20,000,000 (0.33%) objects
-			java.lang.String.split: 40 (0.00%) bytes in 1 (0.00%) objects
-
-java.lang.String[]: 640,513,384 (0.29%) bytes in 20,004,410 (0.33%) objects (avg size 32 bytes)
-	java.lang.String.split: 640,000,080 (0.29%) bytes in 20,000,003 (0.33%) objects (avg size 32 bytes)
-		org.apache.dubbo.common.URL.toMethodParameters: 640,000,000 (0.29%) bytes in 20,000,000 (0.33%) objects (avg size 32 bytes)
-		sun.security.util.DisabledAlgorithmConstraints$Constraints.<init>: 48 (0.00%) bytes in 2 (0.00%) objects (avg size 24 bytes)
-		sun.security.util.AbstractAlgorithmConstraints.getAlgorithms: 32 (0.00%) bytes in 1 (0.00%) objects (avg size 32 bytes)
-	... 22 more below threshold: 513,304 (0.00%) bytes in 4,407 (0.00%) objects (avg size 116 bytes)
-
-java.util.HashMap$EntrySet: 640,000,032 (0.29%) bytes in 40,000,002 (0.66%) objects (avg size 16 bytes)
-	java.util.HashMap.entrySet: 640,000,032 (0.29%) bytes in 40,000,002 (0.66%) objects
-		java.util.AbstractMap.hashCode: 320,000,000 (0.14%) bytes in 20,000,000 (0.33%) objects
-		org.apache.dubbo.common.URL.toMethodParameters: 320,000,000 (0.14%) bytes in 20,000,000 (0.33%) objects
+java.util.HashMap$EntrySet: 640,000,032 (0.67%) bytes in 40,000,002 (1.53%) objects (avg size 16 bytes)
+	java.util.HashMap.entrySet: 640,000,032 (0.67%) bytes in 40,000,002 (1.53%) objects
+		java.util.AbstractMap.hashCode: 320,000,000 (0.33%) bytes in 20,000,000 (0.76%) objects
+		org.apache.dubbo.common.URL.toMethodParameters: 320,000,000 (0.33%) bytes in 20,000,000 (0.76%) objects
 		java.lang.reflect.Constructor.newInstance: 16 (0.00%) bytes in 1 (0.00%) objects
 			java.lang.reflect.Constructor.newInstance: 16 (0.00%) bytes in 1 (0.00%) objects
 		java.util.HashMap.putMapEntries: 16 (0.00%) bytes in 1 (0.00%) objects
 
-java.util.ArrayList: 480,901,944 (0.22%) bytes in 20,037,581 (0.33%) objects (avg size 24 bytes)
-	java.lang.String.split: 480,000,072 (0.22%) bytes in 20,000,003 (0.33%) objects
-		org.apache.dubbo.common.URL.toMethodParameters: 480,000,000 (0.22%) bytes in 20,000,000 (0.33%) objects
-		sun.security.util.DisabledAlgorithmConstraints$Constraints.<init>: 48 (0.00%) bytes in 2 (0.00%) objects
-		sun.security.util.AbstractAlgorithmConstraints.getAlgorithms: 24 (0.00%) bytes in 1 (0.00%) objects
-	... 44 more below threshold: 901,872 (0.00%) bytes in 37,578 (0.00%) objects
+java.util.ArrayList: 480,901,944 (0.50%) bytes in 20,037,581 (0.76%) objects (avg size 24 bytes)
+	org.apache.dubbo.common.utils.StringUtils.splitToList0: 480,000,000 (0.50%) bytes in 20,000,000 (0.76%) objects
+	... 45 more below threshold: 901,944 (0.00%) bytes in 37,581 (0.00%) objects
 
-... 564 more below threshold: 98,377,104 (0.04%) bytes in 1,733,155 (0.02%) objects (avg size 57 bytes)
+int[]: 17,138,480 (0.01%) bytes in 300,037 (0.01%) objects (avg size 57 bytes)
+	org.objectweb.asm.Frame.a: 8,383,032 (0.00%) bytes in 166,167 (0.00%) objects (avg size 50 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 8,383,032 (0.00%) bytes in 166,167 (0.00%) objects (avg size 50 bytes)
+	... 41 more below threshold: 8,755,448 (0.00%) bytes in 133,870 (0.00%) objects (avg size 65 bytes)
+
+org.objectweb.asm.Label: 15,348,736 (0.01%) bytes in 239,824 (0.00%) objects (avg size 64 bytes)
+	org.objectweb.asm.tree.LabelNode.getLabel: 6,196,160 (0.00%) bytes in 96,815 (0.00%) objects
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 6,196,160 (0.00%) bytes in 96,815 (0.00%) objects
+	... 9 more below threshold: 9,152,576 (0.00%) bytes in 143,009 (0.00%) objects
+
+byte[]: 12,163,096 (0.01%) bytes in 30,765 (0.00%) objects (avg size 395 bytes)
+	org.objectweb.asm.ByteVector.a: 5,398,224 (0.00%) bytes in 7,171 (0.00%) objects (avg size 753 bytes)
+		com.devexperts.aprof.transformer.AProfTransformer.transform: 5,398,224 (0.00%) bytes in 7,171 (0.00%) objects (avg size 753 bytes)
+	... 32 more below threshold: 6,764,872 (0.00%) bytes in 23,594 (0.00%) objects (avg size 287 bytes)
+
+... 564 more below threshold: 54,222,928 (0.05%) bytes in 1,166,776 (0.04%) objects (avg size 46 bytes)
 
